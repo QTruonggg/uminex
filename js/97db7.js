@@ -28064,8 +28064,6 @@ This work is subject to the terms at https://www.themepunch.com/links/slider_rev
                     void 0 !== i && t.setRandomDefaults(e, i.key, i.prst));
                 },
                 error: function (e) {
-                  console.log("Transition Table can not be loaded"),
-                    console.log(e);
                 },
               }))
             : void 0 !== i &&

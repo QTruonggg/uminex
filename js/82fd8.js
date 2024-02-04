@@ -4941,76 +4941,7 @@
     Qt = ce.ajaxSettings.xhr();
   (le.cors = !!Qt && "withCredentials" in Qt),
     (le.ajax = Qt = !!Qt),
-    ce.ajaxTransport(function (i) {
-      var o, a;
-      if (le.cors || (Qt && !i.crossDomain))
-        return {
-          send: function (e, t) {
-            var n,
-              r = i.xhr();
-            if (
-              (r.open(i.type, i.url, i.async, i.username, i.password),
-              i.xhrFields)
-            )
-              for (n in i.xhrFields) r[n] = i.xhrFields[n];
-            for (n in (i.mimeType &&
-              r.overrideMimeType &&
-              r.overrideMimeType(i.mimeType),
-            i.crossDomain ||
-              e["X-Requested-With"] ||
-              (e["X-Requested-With"] = "XMLHttpRequest"),
-            e))
-              r.setRequestHeader(n, e[n]);
-            (o = function (e) {
-              return function () {
-                o &&
-                  ((o =
-                    a =
-                    r.onload =
-                    r.onerror =
-                    r.onabort =
-                    r.ontimeout =
-                    r.onreadystatechange =
-                      null),
-                  "abort" === e
-                    ? r.abort()
-                    : "error" === e
-                    ? "number" != typeof r.status
-                      ? t(0, "error")
-                      : t(r.status, r.statusText)
-                    : t(
-                        Yt[r.status] || r.status,
-                        r.statusText,
-                        "text" !== (r.responseType || "text") ||
-                          "string" != typeof r.responseText
-                          ? { binary: r.response }
-                          : { text: r.responseText },
-                        r.getAllResponseHeaders()
-                      ));
-              };
-            }),
-              (r.onload = o()),
-              (a = r.onerror = r.ontimeout = o("error")),
-              void 0 !== r.onabort
-                ? (r.onabort = a)
-                : (r.onreadystatechange = function () {
-                    4 === r.readyState &&
-                      ie.setTimeout(function () {
-                        o && a();
-                      });
-                  }),
-              (o = o("abort"));
-            try {
-              r.send((i.hasContent && i.data) || null);
-            } catch (e) {
-              if (o) throw e;
-            }
-          },
-          abort: function () {
-            o && o();
-          },
-        };
-    }),
+
     ce.ajaxPrefilter(function (e) {
       e.crossDomain && (e.contents.script = !1);
     }),

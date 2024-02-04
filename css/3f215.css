@@ -7128,34 +7128,6 @@ ul.elementor-icon-list-items.elementor-inline-items .elementor-inline-item {
   transform-origin: center;
   transform: rotateY(0deg);
 }
-#wp-admin-bar-elementor_edit_page > .ab-item:before {
-  content: "\e813";
-  font-family: eicons;
-  top: 3px;
-  font-size: 18px;
-}
-#wp-admin-bar-elementor_edit_page .ab-submenu .ab-item {
-  display: flex;
-  width: 200px;
-}
-#wp-admin-bar-elementor_edit_page .elementor-edit-link-title {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  width: 100%;
-}
-#wp-admin-bar-elementor_edit_page .elementor-edit-link-type {
-  background: #3f444b;
-  font-size: 11px;
-  line-height: 9px;
-  margin-top: 6px;
-  padding: 4px 8px;
-  border-radius: 3px;
-}
-#wp-admin-bar-elementor_inspector > .ab-item:before {
-  content: "\f348";
-  top: 2px;
-}
 #wpadminbar * {
   font-style: normal;
 }
